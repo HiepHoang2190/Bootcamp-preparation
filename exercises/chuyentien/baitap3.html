@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập ứng dụng chuyển đổi tiền tệ</title>
+  
+    <link rel="stylesheet" href="baitap3.css">
+   
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+
+        </tr>
+        <tr>
+            <td><input type="number" id="enter"></td>
+            <td>
+                <select name="fromcurrency" id="from">
+                    <option value="VN" >ViệtNam</option>
+                    <option value="CN" >CHINA</option>
+                    
+               
+                </select></td>
+            <td>
+                <select name="tocurrency" id="to">
+                    <option value="USA">USD</option>
+                    <option value="JP">JAPAN</option>
+
+                </select></td>
+            <td>
+                <input type="button" value="convert" onclick="convert()">
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <div id="result">Result</div>
+
+<script >
+    function convert(){
+    let a = document.getElementById('enter').value;
+    let from = document.getElementById('from').value;
+
+    let to = document.getElementById('to').value;
+    if(from=="VN" && to =="USA"){
+        document.getElementById("result").innerHTML=a/23000 + "Usd";
+       }
+       
+    if(from=="VN" && to =="JP"){
+        document.getElementById("result").innerHTML=a/12000 + "Yên";
+       }
+      
+    if(from=="CN" && to =="USA"){
+        document.getElementById("result").innerHTML=a/1000 + "Usd";
+       }
+
+    if(from=="CN" && to =="JP"){
+        document.getElementById("result").innerHTML=a/555 + "Yên";
+       }
+}
+
+     
+
+</script>
+</body>
+
+</html>

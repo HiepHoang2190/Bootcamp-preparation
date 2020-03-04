@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập biến,kiểu dữ liệu toán tử</title>
+    <script src="baitap2.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td >Hoàng Bách Hiệp</td>
+            <td>Toán <br><input id="toan" type="text"></td>
+            <td>Hóa <br><input id="hoa" type="text"></td>
+            <td>Sinh<br><input id="sinh" type="text"></td>
+            <td>Vật lý<br><input id="vatly" type="text"></td>
+
+
+        </tr>
+        <tr>
+            <td><input type="button" value="Trung bình" onclick="trungbinh()"></td>
+        </tr>
+        <tr>
+
+            <td>
+                <p id="aaaa"></p>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Tổng" onclick="tong()"></td>
+        </tr>
+        <tr>
+            <td>
+                <p id="bbb"></p>
+            </td>
+
+        </tr>
+        <hr>
+        <br>
+
+    </table>
+
+
+
+    <!-- 
+    <table>
+        <tr>
+            <td>Hoàng Bách Hiệp</td>
+            <td>Toán <input type="text" id="toan"></td>
+            <td>Hóa <input type="text" id="hoa"></td>
+            <td>Sinh <input type="text" id="sinh"></td>
+            <td>Vật lý <input type="text" id="vatly"></td>
+            <td><input type="button" value="Tổng" onclick="tong()"></td>
+
+        </tr>
+        <tr>
+            <td>
+                <p id="bbb"></p>
+            </td>
+        </tr>
+    </table> -->
+
+
+
+    <hr>
+    <br>
+    <H1>Nhập độ <sup>0</sup>C sang độ F</H1>
+    <table>
+        <tr>
+            <td>Nhập độ <sup>0</sup> C <input type="text" id="inputC"></td>
+            <td><input type="button" value="đối sang độ F" onclick="change()"></td>
+            <td id="ccc"></td>
+        </tr>
+        
+    </table>
+
+
+
+    <hr>
+    <br>
+    <h1> Tính diện tích hình tròn</h1>
+    <table>
+        <tr>
+            <td>Nhập bán kính<input type="text" id="inputR"></td>
+            <td><input type="button" value="Diện tích" onclick="Radius()"></td>
+            <td id="ddd"></td>
+        </tr>
+        
+    </table>
+    <hr>
+    <br>
+    <h1> Tính diện chu vi hình tròn</h1>
+    <table>
+        <tr>
+            <td>Nhập bán kính<input type="text" id="inputZ"></td>
+            <td><input type="button" value="Chu vi" onclick="chuvi()"></td>
+            <td id="eee"></td>
+        </tr>
+        
+    </table>
+</body>
+
+</html>
