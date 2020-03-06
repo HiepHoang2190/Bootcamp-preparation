@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good-cheap-fast</title>
+</head>
+
+<body>
+    <label for="good">Good</label> <input type="checkbox" name="good" id="c1" onclick="CheckGood()"> <br>
+    <label for="fast">Fast</label> <input type="checkbox" name="fast" id="c2" onclick="CheckFast()"> <br>
+    <label for="cheap">Cheap</label> <input type="checkbox" name="cheap" id="c3" onclick="CheckCheap()"> <br>
+    <div id=“d1”></div>
+
+    <script>
+        function CheckGood() {
+            let good = document.getElementById('c1').checked;
+            let fast = document.getElementById('c2').checked;
+            let cheap = document.getElementById('c3').checked;
+            console.log(good,fast,cheap);
+            if (fast && cheap) {
+               
+                    document.getElementById('c3').checked = false;
+                } else {
+                    document.getElementById('c2').checked = false;
+                }
+            }
+     
+        function CheckFast() {
+            let good = document.getElementById('c1').checked;
+            let fast = document.getElementById('c2').checked;
+            let cheap = document.getElementById('c3').checked;
+            // console.log(good,fast,cheap);
+            if (good && cheap) {
+                
+                    document.getElementById('c1').checked = false;
+                } else {
+                    document.getElementById('c3').checked = false;
+                }
+            }
+       
+        function CheckCheap() {
+            let good = document.getElementById('c1').checked;
+            let fast = document.getElementById('c2').checked;
+            let cheap = document.getElementById('c3').checked;
+            // console.log(good,fast,cheap);
+            if (good && fast) {
+               
+                    document.getElementById('c1').checked = false;
+                } else {
+                    document.getElementById('c2').checked = false;
+                }
+            }
+        
+    // </script>
+    // <script>
+    //     function CheckGood() {
+    //         let good = document.getElementById('c1').checked;
+    //         let fast = document.getElementById('c2').checked;
+    //         let cheap = document.getElementById('c3').checked;
+    //         console.log(good,fast,cheap);
+    //         if (fast && cheap) {
+    //             if (Math.random() > 0.5) {
+    //                 document.getElementById('c3').checked = false;
+    //             } else {
+    //                 document.getElementById('c2').checked = false;
+    //             }
+    //         }
+    //     }
+    //     function CheckFast() {
+    //         let good = document.getElementById('c1').checked;
+    //         let fast = document.getElementById('c2').checked;
+    //         let cheap = document.getElementById('c3').checked;
+    //         // console.log(good,fast,cheap);
+    //         if (good && cheap) {
+    //             if (Math.random() > 0.5) {
+    //                 document.getElementById('c1').checked = false;
+    //             } else {
+    //                 document.getElementById('c3').checked = false;
+    //             }
+    //         }
+    //     }
+    //     function CheckCheap() {
+    //         let good = document.getElementById('c1').checked;
+    //         let fast = document.getElementById('c2').checked;
+    //         let cheap = document.getElementById('c3').checked;
+    //         // console.log(good,fast,cheap);
+    //         if (good && fast) {
+    //             if (Math.random() > 0.5) {
+    //                 document.getElementById('c1').checked = false;
+    //             } else {
+    //                 document.getElementById('c2').checked = false;
+    //             }
+    //         }
+    //     }
+    // </script>
+
+</body>
+
+</html>

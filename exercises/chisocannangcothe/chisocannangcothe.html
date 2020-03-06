@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉ số cân nặng cơ thể</title>
+</head>
+
+<body>
+    <h1>Tính chỉ số cân nặng cơ thể</h1>
+
+    <label for="weight">Nhập Cân nặng (kg)</label> <br>
+    <input type="input" name="weigh" id="weight"> <br>
+
+    <label for="height">Nhập Chiều cao(m)</label> <br>
+    <input type="input" name="height" id="height">
+    <br>
+    <input type="button" value="Kết quả" onclick="ketqua()">
+
+    <br>
+    <div id="aa"></div>
+ 
+
+    <script>
+        function ketqua() {
+            let weight = parseFloat(document.getElementById("weight").value);
+            let height = parseFloat(document.getElementById("height").value);
+            let bmi = weight / (height * height);
+            
+
+            if (bmi < 18) { 
+                document.getElementById("aa").innerHTML=("Underweight");
+
+            } else if (bmi < 25.0) {
+                document.getElementById("aa").innerHTML=("Normal");
+            }else if (bmi < 30.0) {
+                document.getElementById("aa").innerHTML=("Overweight");
+            }else {
+                document.getElementById("aa").innerHTML=("Obese");
+            }
+        }
+    </script>
+
+
+<!-- <script>
+    let weight = parseFloat(prompt (“Nhập cân nặng của bạn :“));
+    let height = parseFloat(prompt (“Nhập chiều cao của bạn (m) :“));
+    bmi = weight/(height*height);
+    if (bmi < 18 ) {
+        alert (“Bạn gầy trơ xương, cần bồi bổ thêm !!! chỉ số bmi của bạn là:” + bmi);
+    } else if (18.5 <= bmi < 25 ) {
+        alert (“Bạn hoàn toàn bình thường :D ! chỉ số bmi của bạn là: ” + bmi);
+    } else if (25 <= bmi < 30) {
+        alert (“Bạn quá cân nên đi tập gym nhẹ :3! chỉ số bmi của bạn là:” + bmi);
+    } else if (bmi >= 30) {
+        alert (“Bạn bị béo phì chăm tập gym và thể dục và ăn uống khoa học hơn :(! chỉ số bmi của bạn là:” + bmi)
+    }
+</script> -->
+
+<script>
+    
+</script>
+</body>
+
+</html>

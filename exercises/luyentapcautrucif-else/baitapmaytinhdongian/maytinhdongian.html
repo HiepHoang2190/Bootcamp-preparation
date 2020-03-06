@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="4"><input type="text" id="result" ></th>
+        </tr>
+        <tr>          
+            <th><button onclick="result.value+='1'" >1</button></th>
+            <th><button onclick="result.value+='2'">2</button></th>
+            <th><button onclick="result.value+='3'">3</button></th>
+            <th><button onclick="result.value+='+'" >+</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="result.value+='4'">4</button></th>
+            <th><button onclick="result.value+='5'">5</button></th>
+            <th><button onclick="result.value+='6'">6</button></th>
+            <th><button onclick="result.value+='-'">-</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="result.value+='7'">7</button></th>
+            <th><button onclick="result.value+='8'">8</button></th>
+            <th><button onclick="result.value+='9'">9</button></th>
+            <th><button onclick="result.value+='*'">x</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="result.value=''">C</button></th>
+            <th><button onclick="result.value+='0'">0</button></th>
+            <th><button onclick="result.value=eval(result.value)">=</button></th>
+            <th><button onclick="result.value+='/'">/</button></th>
+        </tr>
+    </table>
+    <!-- <script>
+            function calculator(){
+            document.getElementById("result").value=+document.getElementById("result").value;
+            }
+    </script> -->
+</body>
+</html

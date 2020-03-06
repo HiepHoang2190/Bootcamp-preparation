@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let diem = parseFloat(prompt("Nhập điểm , 0"));
+        switch ((diem > 9) ? 1 :(diem>8 ?2 :(diem>7 ?3:(diem>5 ?4:0))) ) {
+            case 1:
+                alert('Xuất sắc');
+                break;
+            case 2:
+                alert('Giỏi');
+                break;
+            case 3:
+                alert('Khá');
+                break;
+            case 4:
+                alert('Trung bình');
+                break;
+
+            default:
+                alert("Yếu");
+        }
+    </script>
+
+
+</body>
+
+</html>
