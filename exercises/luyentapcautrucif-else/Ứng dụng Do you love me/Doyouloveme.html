@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me</title>
+</head>
+<body>
+    <h1>Do You Love Me ??</h1>
+    <p id="oke"></p>
+    <button style="border-radius:10px; background-color:wheat; color: white; " id="yes" onclick="yes()">YES</button>
+    <button onmouseover="random()" style="border-radius:10px; background-color: wheat; color: white; position: absolute; "
+        id="no">NO</button>
+
+<script>
+    function yes() {
+        document.getElementById("oke").innerHTML = "Yes ";
+    }
+    function random() {
+        no.style.left = (Math.random()*500)+"px";
+        no.style.top = (Math.random()*500)+"px";
+    }
+    </script>
+</body>
+</html>

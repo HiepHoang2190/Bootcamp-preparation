@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+
+</script> 
+<h2>Bài 6</h2>
+<label for="doanhso">Doanh số</label> <br>
+<input type="input" name="doanhso" id="doanhso"> <br>
+<input type="button" value="Hoa hồng" onclick="hoahong()">
+<div id="hoahong"></div>
+<script>
+    function hoahong(){
+        let n = document.getElementById("doanhso").value;
+        let hoahong = 0;
+        if (n<= 5000000){
+            document.getElementById("hoahong").innerHTML = n*0.05;
+        } else if(n<= 10000000){
+            document.getElementById("hoahong").innerHTML = n*0.1;
+        } else {
+            document.getElementById("hoahong").innerHTML = n*0.15;
+        }
+    }
+</script>
+    
+</body>
+</html>

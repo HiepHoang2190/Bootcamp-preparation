@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập số phút gọi vào: "))
+        let b = 25+ (a*0.6);
+        let c = 25+ (50*0.6) +((a-50)*0.4);
+        let d = 25+ (50*0.6) +(150*0.4) +((a-200)*0.2);
+        if (a<51) {
+            alert ("Tiền điện thoại= " + b + " nghìn đồng");
+        } else if (a<201) {
+            alert ("Tiền điện thoại= " + c + " nghìn đồng");
+        } else {
+            alert ("Tiền điện thoại= " + d + " nghìn đồng");
+        }
+    </script>
+
+</body>
+</html>
