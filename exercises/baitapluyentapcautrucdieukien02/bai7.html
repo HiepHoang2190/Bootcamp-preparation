@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+</head>
+
+<body>
+    <script>
+        alert('Phương trình bậc 2 có dạng ax² + bx + c = 0');
+        let a = parseInt(prompt('Nhập a'));
+        let b = parseInt(prompt('Nhập b'));
+        let c = parseInt(prompt('Nhập c'));
+        let x, y;
+        let delta = (Math.pow(b, 2) - (a * c * 4));
+
+
+        if (a == 0 && b != 0) {
+            alert('Phương trình trở thành bậc nhất có nghiệm là' + (x = (-c / b)))
+        } else if (a == 0 && b == 0) {
+            alert('Phương trình vô lý')
+        }
+        if (delta >= 0) {
+            if (delta > 0) {
+                x = (-b + Math.sqrt(delta) / (2 * a))
+                y = (-b - Math.sqrt(delta) / (2 * a))
+                alert('Phương trình có 2 nghiệm phân biệt ' + x + 'và' + y)
+            } else {
+                x = (-b / (2 * a))
+                alert('Phương trình có nghiệm kép ' + x)
+            }
+        } else {
+            alert('Phương trình vô nghiệm')
+        }
+    </script>
+</body>
+
+</html>

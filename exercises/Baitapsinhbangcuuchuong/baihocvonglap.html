@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //vòng for (biết trước được số lần lặp)
+        // // for (let i =1; i<10; i++) {
+        // //     document.write ('i =' + i);
+        // //     document.write ("<br>");
+
+        // }
+
+        // for (let i =1; i<10;i++) {
+        //     if (i%2 ==0) {
+        //        document.write ('i=' +i);
+        //        document.write ("<br>");
+        //     }
+        // }
+
+
+        // for (let i = 1; i < 10; i += 2) {
+        //     document.write('i=' + i);
+        //     document.write("<br>");
+        // }
+
+        // vòng lặp while và do...while (chưa xác định được số lần lặp)
+        // vòng while thì kiểm tra đk rồi mới thực hiện -> có ít nhất 0 lần lặp
+        // vòng lặp do....while thì thực hiển rồi mới kiểm tra-> có ít nhất 1 lần lặp
+
+        // let i = 1;
+        // while (i <= 10) {
+        //     document.write('i=' + i);
+        //     document.write("<br>");
+        //     i += 1;
+        // }
+
+
+
+        // let j = 0;
+        // do {
+        //     j += 1;
+        //     document.write('j=' + j);
+        //     document.write("<br>");
+        // } while (j <= 10)
+
+        // for (let i=1;i<=10;i++) {
+        //     for (let j=1;j<=10;j++) {
+        //         document.write(i+ "x"+ j + "=" + (i*j)+ "\t ");
+        //     }
+        //     document.write("<br>")
+        // }
+
+
+
+
+        let bcc = "<table border='1'>";
+        for (let i = 1; i <= 10; i++) {
+            bcc = bcc + "<tr>";
+            for (let j = 1; j <= 10; j++) {
+                bcc = bcc + "<td>" + (i + "x" + j + "=" + (i * j)) + "</td>";
+            }
+            bcc = bcc + "</tr>";
+        }
+        bcc = bcc + "</table>";
+        document.write(bcc);
+            //có nên sử dụng nhiều vòng lặp lồng nhau hay khoogn?
+            //vẫn phải có
+            // bao nhiêu
+            // độ phức tạp của thuật toán
+// //10*10*10
+// for (let i=0;i<=10;i++){
+//     for (let j=0;j<=10;j++)
+// }
+
+
+
+// in 20 số nguyên tố
+// let number=2;
+// let count= 0;
+
+// while ( count<20){
+//     let total=0;
+//     for(let i=2;i<=number/2;i++){
+//         if (number %i==0) {
+//             total +=1;
+//             break;
+//         }
+//     }
+// }
+// if (total ==0) {
+//     document.write(number);
+//     document.write("<br>");
+//     count +=1;
+
+// }
+// number +=1;
+
+
+
+
+// for (let i =1; i<=10;i++) {
+//     document.write(i);
+//     document.write("<br>");
+//     if(i%5==0) {
+//         break;
+//     }
+// }
+
+
+// for (let i =1; i<=10;i++) {
+
+//     if(i%2==0) {
+//         continue;
+//     }
+//     document.write(i);
+//     document.write("<br>");
+// }
+
+//break: thoát ra khỏi vòng lăp;, tại vị trí thỏa mãn dkd
+// continue : bỏ qua bước lặp hiện tại, và thực hiện bước lặp tiếp theo
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

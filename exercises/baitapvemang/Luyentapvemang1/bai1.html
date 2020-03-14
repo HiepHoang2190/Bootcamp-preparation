@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <script>
+        let a = new Array();
+        let i;
+        let n ="";
+        let m = "";
+        for ( i=0; i<10; i++) {
+            a[i]= Math.floor(Math.random()*20);
+            m = m + " ; " + a[i];
+        }
+        for(let i =0; i<a.length; i++){
+            if(a[i]>= 10){
+                n= n + " ; " + a[i];
+              
+              
+            }
+        }
+        
+        document.write("Các phần tử của mảng là :" + m)
+        document.write("<br>")
+        document.write("Các giá trị lớn hơn hoặc bằng 10 là "+ n )
+    </script>
+
+</body>
+</html>

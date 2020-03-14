@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cửu chương</title>
+    <style>
+        table { margin: 0px auto;
+        padding: 10px;
+            background-color: antiquewhite;
+        }
+        body{
+            background-color: black;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+     
+     let bcc = "<table border='1'>";
+        for (let i = 1; i <= 10; i++) {
+            bcc = bcc + "<tr>";
+            for (let j = 1; j <= 10; j++) {
+                bcc = bcc + "<td>" + (i + "x" + j + "=" + (i * j)) + "</td>";
+            }
+            bcc = bcc + "</tr>";
+        }
+        bcc = bcc + "</table>";
+        document.write(bcc);
+
+    </script>
+</body>
+</html>

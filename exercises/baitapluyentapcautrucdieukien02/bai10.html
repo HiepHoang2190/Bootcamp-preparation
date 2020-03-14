@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giá điện sinh hoạt</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt('Nhập chỉ số điện bạn đã xài (KW/h)'));
+        let b;
+        if (a > 0 && a <= 50) {
+            alert('Tiền điện của bạn là' + (b = a * 1678) + 'VND')
+        } else if (a >= 51 && a <= 100) {
+            alert('Tiền điện của bạn là' + (b = 50 * 1678 + (a - 50) * 1734) + 'VND')
+        } else if (a >= 101 && a <= 200) {
+            alert('Tiền điện của bạn là' + (b = 50 * 1678 + 50 * 1734 + (a - 200) * 2014) + 'VND')
+        } else if (a >= 201 && a <= 300) {
+            alert('Tiền điện của bạn là' + (b = 50 * 1678 + 50 * 1734 + 100 * 2014 + (a - 300) * 2536) + 'VND')
+        } else if (a >= 301 && a <= 400) {
+            alert('Tiền điện của bạn là' + (b = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (a - 400) * 2834) + 'VND')
+        } else (
+            alert('Tiền điện của bạn là' + (b = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (a - 400) * 2927) + 'VND')
+        )
+
+    </script>
+</body>
+
+</html>

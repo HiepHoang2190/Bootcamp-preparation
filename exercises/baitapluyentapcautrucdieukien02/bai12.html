@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi vay ngân hàng</title>
+</head>
+
+<body>
+    <script>
+       let a = parseInt(prompt('Nhập số tiền vay ban đầu'));
+        let b = parseInt(prompt('Thời gian cho vay ( tháng )'));
+        let c = parseInt(prompt('Nhập lãi suất ( năm )'));
+        let s = (a * (c / 100) * (b/12));
+        let q = s + a;
+        alert('Số tiền bạn phải trả là' + q +" vnd")
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cửu chương</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <script>
+        let sout;
+            sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>" 
+                 
+                for (i = 1; i <= 9; i++) {
+                    sout = sout + "<tr>";
+                for (j = 2; j <=9; j++) {
+                    
+                    sout = sout + "<td>" + j +'x'+i +'=' + j*i +"</td>";
+                }
+                    sout = sout + "</tr>";
+                }
+            
+                    sout = sout + "</table>";
+                    document.write(sout);
+
+    </script>
+    
+    <style>
+        table {
+            background-color: grey;
+            margin-top: 100px;
+            margin-left: 420px;
+        }
+        h1 {
+            margin-top:100px ;
+            margin-left: 520px;
+            color:rebeccapurple;
+        }
+       
+        body {
+            background-color: black;
+        }
+        
+
+    </style>
+</body>
+</html>

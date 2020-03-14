@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In ra 20 số fibonaci đầu tiên</title>
+</head>
+
+<body>
+    <script>
+        let n = 20;
+        let i;
+        let a;
+        for (i = 1; i <= n; i++) {
+            a = (1 / (Math.sqrt(5)) * (Math.pow(((1 + Math.sqrt(5)) / 2), i) - Math.pow(((1 - Math.sqrt(5)) / 2), i))).toFixed(0);
+            document.write(a + '<br>');
+
+        }
+    </script>
+
+
+</body>
+
+</html>
