@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo lớp hình chữ nhật</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+    <br>
+
+    <script>
+        let Rectangle = function (x, y, wid, hei) {
+            this.x = x;
+            this.y = y;
+            this.wid = wid;
+            this.hei = hei;
+
+        }
+        function getRandomHex() {
+            return Math.floor(Math.random() * 255);
+        }
+
+        function getRandomColor() {
+            var red = getRandomHex();
+            var green = getRandomHex();
+            var blue = getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green + ")";
+        }
+
+        function creatRectangle() {
+            let wid = +prompt("Nhập vào Chiều dài");
+            let hei = +prompt("Nhập vào Chiều rộng");
+            let perimeter = (wid * hei) * 2;
+            let Area = wid * hei;
+            document.write("Chu vi hình chữ nhật là: " + perimeter + "<br>");
+            document.write("Diện tích hình chữ nhật là: " + Area + "<br>");
+            var x = 384;
+            var y = 192;
+            // var x = Math.random() * window.innerWidth;
+            // var y = Math.random() * window.innerHeight;
+            var color = getRandomColor();
+            // var color = "rgb(155, 237, 217)";
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            var rec = new Rectangle(x, y, wid, hei);
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.fill();
+            // ctx.strokeRect(rec.x, rec.y, rec.wid, rec.hei);
+            ctx.fillRect(rec.x, rec.y, rec.wid, rec.hei);
+
+
+
+
+        }
+
+        creatRectangle();
+
+    </script>
+</body>
+
+</html>

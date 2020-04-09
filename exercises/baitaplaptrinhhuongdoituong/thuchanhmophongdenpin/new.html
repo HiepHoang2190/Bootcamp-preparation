@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Person {
+            constructor(fn, age, gender, weight) {
+                this.fullname = fn;
+                this.age = age;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            greeting() {
+                return "My full name is " + this.fullname + ", I am  " + this.age + " years old, " + "I am " + this.gender + ". My weight is " + this.weight;
+            }
+            getweight() {
+                return this.weight;
+            }
+           eat(food,v) {
+               this.weight = this.weight + v;
+               food.decrement(v);
+
+           }
+        }
+
+        class Food {
+            constructor (n,w) {
+                this.name= n;
+                this.wei=w;
+            }
+            decrement(v) {
+                this.wei=this.wei-v;
+
+            }
+            getweight() {
+                return this.wei;
+            }
+            getname() {
+                return this.name;
+            }
+        }
+
+        let sop= new Person("Hoàng Bách Hiệp", 18,"male", 60);
+        let ech= new Food("ech xao sả",10);
+        document.write(sop.greeting() + "<br>");
+        document.write(sop.getweight() + "<br>");
+        sop.eat(ech,3);
+        document.write(sop.getweight() + "<br>");
+        document.write(ech.getweight() + "<br>");
+    </script>
+
+</body>
+
+</html>

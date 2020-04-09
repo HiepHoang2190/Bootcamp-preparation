@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+    <!-- Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả
+    về true, ngược lại trả về false. -->
+</head>
+<h1>Nhập vào 1 số</h1>
+<input type="text" value="" id="enter">
+<input type="button" value="Check" onclick="check()">
+<div id="ketqua"></div>
+<script>
+    function num() {
+        let a = document.getElementById("enter").value;
+        if (a > 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    function check() {
+        if (num()==true ) {
+            document.getElementById("ketqua").innerHTML = "Số nhập vào là số nguyên dương";
+        } else {
+            document.getElementById("ketqua").innerHTML = "Số nhập vào không phải là số nguyên dương";
+        }
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

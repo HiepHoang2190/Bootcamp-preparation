@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baì 3</title>
+    <!-- Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình
+    của các phần tử trong mảng. -->
+</head>
+<script>
+
+    let s = 0;
+    let a = new Array();
+    let x = +prompt("Nhập vào số phần tử của mảng");
+    let y = +prompt("Nhập vào giá trị tối đa của mảng");
+    let i = 0;
+    do {
+        let t = Math.floor(Math.random() * y + 20);
+        if (a.indexOf(t) == -1) {
+            a[i] = t;
+            i++;
+        }
+    }
+    while (i < x)
+
+    document.write('Các phần tử của mảng là' + a + "<br>");
+    let max = a[0];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+        s = (s + a[i]) / x;
+    }
+    document.write('Giá trị lớn nhất trong mảng là ' + max + "<br>");
+    document.write('Trung bình cộng của các phần tử trong mảng là ' + s);
+
+
+
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>

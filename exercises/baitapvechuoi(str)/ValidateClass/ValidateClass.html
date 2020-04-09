@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Class</title>
+    <!-- Viết phương thức để kiểm tra tính hợp lệ của tên một lớp học.
+
+Tên một lớp học hợp lệ cần đạt các yêu cầu sau:
+
+Bắt đầu bằng một ký tự chữ hoa C hoặc A hoặc P
+
+Không chứa các ký tự đặc biệt
+
+Theo sau ký tự bắt đầu là 4 ký tự số 
+
+Kết thúc phải là 1 trong những ký tự chữ hoa sau: G, H, I, K, L, M
+
+Ví dụ tên lớp hợp lệ: C0318G
+
+Ví dụ tên lớp không hợp lệ: M0318G, P0323A -->
+</head>
+
+<body>
+    <script>
+        function vaidateClass(cls) {
+            regexp = /^([CAP])([0-9]{4})([GHIKLM])$/;
+            if (regexp.test(cls)) {
+                alert('Class is correct');
+            } else {
+                alert('Class isnt correct');
+            }
+        }
+        let a = prompt('enter class');
+        vaidateClass(a);
+    </script>
+
+</body>
+
+</html>

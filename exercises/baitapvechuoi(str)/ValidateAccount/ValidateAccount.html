@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Account</title>
+    <!-- Viết phương thức để kiểm tra tính hợp lệ của tên tài khoản.
+
+Một tài khoản hợp lệ cần đạt các yêu cầu sau:
+
+Không chứa các ký tự đặc biệt
+Ít nhất là 6 ký tự
+Không chứa các ký tự viết hoa
+Cho phép dấu gạch dưới (_) -->
+</head>
+<body>
+    <script>
+        function validateAcc(acc){
+           regexp= /^[_a-z0-9]{6,}$/;
+           if ( regexp.test(acc)){
+               alert('Account is correct')
+           } else {
+               alert('Account isnt correct')
+           }
+        }
+       let a= prompt('Enter Account')
+       validateAcc(a)
+    </script>
+    </script>
+    
+</body>
+</html>

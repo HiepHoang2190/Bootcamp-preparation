@@ -13,7 +13,7 @@
         let i;
         let a;
         for (i = 1; i <= n; i++) {
-            a = (1 / (Math.sqrt(5)) * (Math.pow(((1 + Math.sqrt(5)) / 2), i) - Math.pow(((1 - Math.sqrt(5)) / 2), i))).toFixed(0);
+            a = Math.floor(1 / (Math.sqrt(5)) * (Math.pow(((1 + Math.sqrt(5)) / 2), i) - Math.pow(((1 - Math.sqrt(5)) / 2), i))).toFixed(0);
             document.write(a + '<br>');
 
         }

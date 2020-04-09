@@ -21,19 +21,36 @@
 
 
         //Hien thi dialog -> cho phep nhap gia tri cua N
-        var N = prompt('Nhap gia tri N')
+        let N = prompt('Nhap gia tri N')
         //Chuyen kieu du lieu cua N tu string toi int
         N = parseInt(N)
         //xay dung do cao cua hinh tam giac
-        for (i = 0; i < N; i++) {
+        for (let i = 0; i < N; i++) {
             //tao hang (row) *
-            for (j = 0; j <= i; j++) {
-                document.writeln(" * ")
+            for (let j = 0; j <= i; j++) {
+                document.write(" * ")
             }
 
             //xuong dong khi hien thi ket qua cua tung hang
-            document.writeln("<br/>")
+            document.write("<br/>")
         }
+        document.write("<br>");
+        //tam giác vuông thứ 2
+
+        for (let a = 0; a < N; a++) {
+
+            for (let b = N; b > a; b--) {
+                document.write(" * ")
+            }
+            document.write("<br/>")
+        }
+
+        document.write("<br>");
+
+        //tam giác thứ 3
+
+     
+
 
 
 

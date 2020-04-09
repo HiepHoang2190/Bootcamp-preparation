@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <!-- Bài 1: Kiểm tra chuỗi đưa vào có đúng dạng dd/mm/yyyy -->
+</head>
+
+<body>
+    <script>
+        function validateDATE(str) {
+            var pattern = /^([1-31])+\/([1-12])+\/([0-9]{4})$/;
+            if (pattern.test(str)) {
+                alert("correct");
+            } else {
+                alert("wrong");
+            }
+        }
+        let a = prompt("enter day/month/year");
+        validateDATE(a);
+    </script>
+</body>
+
+</html>

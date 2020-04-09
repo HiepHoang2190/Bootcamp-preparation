@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1-Tính bình phương 1 số</title>
+</head>
+
+<body>
+    <h2 >Enter your number</h2>
+    <input type="number" name="number" id="number">
+    <input type="button" name="" id="" onclick="square()" value="square">
+    <div>Result: <span id="result"></span></div>
+    <script>
+        function square() {
+            let a = document.getElementById("number").value;
+            let s = a * a;
+            document.getElementById("result").innerHTML = s;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

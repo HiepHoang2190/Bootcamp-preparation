@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <!-- Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo
+    cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số. -->
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Enter 2 values</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="number" id="input1" placeholder="number1">
+                    <input type="number" id="input2" placeholder="number2">
+                    <input type="button" value="Check" onclick="check()">
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+        function check() {
+            let a = +document.getElementById("input1").value;
+            let b = +document.getElementById("input2").value;
+            let s;
+            if (a > b) {
+                alert(a + " lớn hơn" + b);
+            } if (a <= b) {
+                alert("giá trị a nhỏ hơn giá trị b nên tổng của a và b là: " + (s = (a + b)));
+            }
+        }
+    </script>
+
+</body>
+
+</html>

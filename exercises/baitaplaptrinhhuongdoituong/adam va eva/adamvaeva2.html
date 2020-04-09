@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td><input type="image" src="../adam va eva/images/Adam.png" name="" id="" onclick="adam()"></td>
+                <td><input type="image" src="../adam va eva/images/Eva.png" name="" id="" onclick="eva()"></td>
+                <td><input type="image" src="../adam va eva/images/Apple.jpg" onclick="applee()"> Scroll Down</td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Check" onclick="check()">
+                    <input type="button" value="Eat" onclick="eat()">
+                    <input type="button" value="Talk" onclick="talk()">
+                </td>
+                <td><input type="button" value="Check" onclick="check1()">
+                    <input type="button" value="Eat" onclick="eat1()">
+                    <input type="button" value="Talk" onclick="talk1()">
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p id="Adam-said"></p>
+                </td>
+                <td >
+                    <p d="Eva-said"></p>
+                </td>
+            </tr>
+        </tbody>
+
+        <script>
+
+            class Apple {
+                constructor(v) {
+                    this.weightApple=v;
+                    
+                }
+                getweightApple() {
+                    return this.weightApple;
+                }
+                decreaseWeight() {
+                    if (this.weightApple > 0) {
+                        this.weightApple--;
+                    }
+
+                }
+            }
+            class Person {
+                constructor(fn, gender, w) {
+                    this.fullName = fn;
+                    this.gender = gender;
+                    this.weight = w;
+                }
+                talk(something) {
+                    document.write(this.fullName + " said: " + something);
+                }
+                greeting() {
+                    return "My fullname is " + this.fullName +
+                        ", I am " + this.gender + ". My weight is " + this.weight;
+
+                }
+                check(apple) {
+                    return apple.getweightApple();
+                }
+                eatApple(apple) {
+                    return apple.decreaseWeight();
+                }
+            }
+
+            let Adam = new Person('Adam', 'Male', '60kg');
+            let Eva = new Person('Eva', 'FeMale', '45kg');
+            let app = new Apple(0);
+            let haveApple = false;
+            alert('Click the pictrue')
+            function adam() {
+                alert('Name: ' + Adam.fullName + ' Gender: ' + Adam.gender + ' Weight: ' + Adam.weight)
+            }
+            function eva() {
+                alert('Name: ' + Eva.fullName + ' Gender: ' + Eva.gender + ' Weight: ' + Eva.weight)
+            }
+            function applee() {
+                alert('You have an apple')
+                haveApple = true;
+                app.weightApple += 10;
+            }
+            function check() {
+                if (haveApple == true) {
+                    let weightleft= Adam.check(app);
+                    alert ("Apple left " + app.weightApple) ;
+                }else {
+                    alert('You dont have an apple! Click the apple tree')
+                }
+                
+            }
+            function eat() {
+                if (haveApple == false) {
+                    alert('You dont have an apple! Click the apple tree');
+                }else if (app.weightApple == 0){
+                    alert('Out of apple');
+                }else {
+                    app.decreaseWeight();
+                    alert( Adam.fullName+' is eatting the apple');
+                }
+            }
+            function talk(){
+            let msg = prompt(Adam.fullName+ " want to say");
+            if(msg!=null){
+            Adam.talk(msg);
+            document.getElementById("Adam-said").innerHTML= msg;
+        }
+        }
+        </script>
+
+    </table>
+
+</body>
+
+</html>

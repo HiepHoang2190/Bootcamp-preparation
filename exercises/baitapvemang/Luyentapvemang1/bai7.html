@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình
+    kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là
+    dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng) -->
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr[i] = Math.floor(Math.random() * 10 + 1);
+        }
+        document.write(arr.join());
+        let v = +prompt("input your number:");
+        let i = 0;
+        let len = arr.length;
+        while (i < len) {
+            if (arr[i] == v) {
+                for (let j = i; j < len - 1; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                arr.pop();
+                len--;
+            }
+            i++;
+        }
+        document.write("<br>");
+        document.write(arr.join());
+    </script>
+</body>
+
+</html>

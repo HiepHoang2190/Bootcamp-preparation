@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Email</title>
+    <!-- Viết phương thức để kiểm tra tính hợp lệ của một email.
+
+Một email hợp lệ cần đạt các yêu cầu sau:
+
+Bắt đầu bằng một ký tự
+Không chứa các ký tự đặc biệt
+Có một ký tự @ ngăn cách tên email và domain
+Domain phải hợp lệ -->
+</head>
+
+<body>
+    <script>
+        function validateEmail(email) {
+            regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (regexp.test(email)) {
+                alert('Email is correct')
+            } else {
+                alert('Email isnt correct')
+            }
+        }
+        let a = prompt('Enter email')
+        validateEmail(a)
+    </script>
+</body>
+
+</html>

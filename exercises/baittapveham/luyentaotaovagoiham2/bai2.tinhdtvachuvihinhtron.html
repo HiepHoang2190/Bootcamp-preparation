@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được -->
+</head>
+
+<body>
+    <h2>Enter your Radius</h2>
+    <input type="number" name="number" id="number">
+    <input type="button" name="" id="" onclick="count()" value="count">
+    <div>Chu vi hình tròn: <span id="result1"></span></div>
+    <div>Diện tích hình tròn: <span id="result2"></span></div>
+    <script>
+        function count() {
+            let a = document.getElementById("number").value;
+            let s = ((2 * a) * Math.PI);
+            let y = (Math.pow(a, 2) * Math.PI);
+            document.getElementById("result1").innerHTML = s;
+            document.getElementById("result2").innerHTML = y;
+
+        }
+
+    </script>
+</body>
+
+</html>

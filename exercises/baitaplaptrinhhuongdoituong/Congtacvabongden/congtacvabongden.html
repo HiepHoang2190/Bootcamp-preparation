@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="image" src="lamp.jpg">
+    <input type="image" src="switchbutton.jpg" onclick="switchh()">
+    <div id='light'></div>
+    <script>
+        let lamp = function (status) {
+            this.status = status;
+            this.turnON_OFF = function () {
+                if(this.status == false){
+                    this.status = true;
+                }else{
+                    this.status= false;
+                }
+            }
+        }
+        let switchButton = function (lamp) {
+            this.lamp = lamp;
+            this.switchON_OFF = function (lamp) {
+                this.lamp.turnON_OFF();
+            }
+        }   
+        let lmp = new lamp(false);
+        let sw = new switchButton(lmp);
+        function switchh() {
+            if(lmp.status == false){
+                sw.switchON_OFF(lmp);
+                document.getElementById('light').innerHTML = "<style> body { background-color: white;}</style>";
+                console.log(lmp.status)
+
+            }else{
+                sw.switchON_OFF(lmp);
+                document.getElementById('light').innerHTML = "<style> body { background-color: black;}</style>"
+            }
+        }
+
+        function display() {
+            document.getElementById('light').innerHTML = "<style> body { background-color: black;}</style>"
+        }
+        display()
+    </script>
+</body>
+</html>

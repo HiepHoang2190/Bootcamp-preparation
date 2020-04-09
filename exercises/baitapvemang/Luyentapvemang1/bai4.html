@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 4</title>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó. -->
+</head>
+<body>
+    <script>
+         let s = 0;
+    let a = new Array();
+    let x = +prompt("Nhập vào số phần tử của mảng");
+    let y = +prompt("Nhập vào giá trị tối đa của mảng");
+    let i = 0;
+    do {
+        let t = Math.floor(Math.random() * y + 20);
+        if (a.indexOf(t) == -1) {
+            a[i] = t;
+            i++;
+        }
+    }
+    while (i < x)
+
+    document.write("Các phần tử của mảng trước khi đảo ngược là:" + a + "<br>");
+    a.reverse();
+    document.write("Các phần tử của mảng sau khi đảo ngược là:" + a + "<br>");
+
+    </script>
+</body>
+</html>

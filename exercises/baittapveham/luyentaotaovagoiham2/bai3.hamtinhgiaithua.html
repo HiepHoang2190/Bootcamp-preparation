@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm tính giai thừa</title>
+    <!-- Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được. -->
+</head>
+
+<body>
+
+    <script>
+        function factorialize(num) {
+            var result = num;
+            if (num === 0 || num === 1) {
+                return 1;
+            }
+            while (num > 1) {
+                num--;
+                result *= num;
+            }
+            return result;
+        }
+
+        var num = parseInt(prompt('Nhập số bạn muốn tính giai thừa'))
+
+        alert(num + ' có giai thừa là ' + factorialize(num))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="image" src="../Congtacvabongden/lamp.jpg">
+    <input type="image" src="../Congtacvabongden/switchbutton.jpg" onclick="switchh()">
+    <div id='light'></div>
+    <script>
+        class lamp {
+            constructor(status) {
+                this.status = status;
+            }
+            turnON_OFF() {
+                if (this.status == false) {
+                    this.status = true;
+                } else {
+                    this.status = false;
+                }
+            }
+        }
+        class switchButton {
+            constructor(lamp) {
+                this.lamp = lamp;
+            }
+            switchON_OFF(lamp) {
+                this.lamp.turnON_OFF();
+            }
+        }
+
+        let lmp = new lamp(false);
+        let sw = new switchButton(lmp);
+        function switchh() {
+            if (lmp.status == false) {
+                sw.switchON_OFF(lmp);
+                document.getElementById("light").innerHTML = "<style> body { background-color: white;}</style>";
+                console.log(lmp.status);
+            } else {
+                sw.switchON_OFF(lmp);
+                document.getElementById('light').innerHTML = "<style> body { background-color: black;}</style>";
+            }
+        }
+
+        function display() {
+            document.getElementById('light').innerHTML = "<style> body { background-color: black;}</style>"
+        }
+        display()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình
+    tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra
+    "V is not in the array". -->
+</head>
+
+<body>
+    <script>
+        // let arr = [];
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 5);
+        // }
+        // document.write(arr.join());
+        // document.write("<br>");
+        // let v = +prompt("input your number:");
+        // for (let i=0; i<10;i++){
+        //     if (arr.indexOf(v) != -1){
+        //         document.write( v+" is in the array" );
+        //         break;
+        //     }else {
+        //         document.write( v+ " is not in the array" );
+        //         break;
+        //     }
+        // }
+
+        let a = new Array();
+        let x = +prompt("Nhập vào số phần tử của mảng");
+        let y = +prompt("Nhập vào giá trị tối đa của mảng");
+        let i = 0;
+        do {
+            let t = Math.floor(Math.random() *y +20);
+            if (a.indexOf(t) == -1) {
+                a[i] = t;
+                i++;
+            }
+        }
+        while (i < x)
+        document.write("Các phần tử của mảng  là:" + a + "<br>");
+
+        let v = +prompt("Nhập vào số cần kiểm tra có trong mảng hay không");
+        for (let i=0; i<10;i++){
+            if (a.indexOf(v) != -1){
+                document.write( v+" is in the array" );
+                break;
+            }else {
+                document.write( v+ " is not in the array" );
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <!-- Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false. -->
+</head>
+<body>
+    <input type="text" id="enter" value="">
+    <input type="button" id="" value="Check" onclick="check()">
+    <div id="ketqua"></div> 
+    <script>
+        function isNumber(){
+            let a = document.getElementById("enter").value;
+            if (isNaN(a)==false){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function check(){
+            if (isNumber() == true) {
+                document.getElementById("ketqua").innerHTML= "this is a number";
+            } else {
+                document.getElementById("ketqua").innerHTML= "this is not a number";
+            }
+        }
+    </script>
+    
+</body>
+</html>

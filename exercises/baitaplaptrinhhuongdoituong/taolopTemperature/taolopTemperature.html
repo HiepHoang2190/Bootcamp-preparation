@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo lớp Temperature</title>
+</head>
+<body>
+    <script>
+        let Temperature = function (Celsius){
+            this.Celsius= Celsius;
+            this.getFahrenheit= function() {
+                let f = (Celsius*1.8) +32;
+                return f;
+            }
+            this.getKelvin= function() {
+                let k = Celsius +273.5;
+                return k;
+            }
+        }
+       
+       let cel = +prompt ("Nhập vào độ C")
+       let tem = new Temperature(cel);
+       let Fahrenheit= tem.getFahrenheit();
+       let Kelvin=tem.getKelvin();
+       alert ("Khi Celsius= " +cel +" : Fahrenheit= " + Fahrenheit + " : Kelvin= " + Kelvin);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+
+    <!-- Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có
+    giá trị lớn nhất trong mảng và vị trí của phần tử đó. -->
+</head>
+
+<script>
+    let a = new Array();
+    let i = 0;
+    let t;
+    do {
+        let t = Math.floor(Math.random() * 71 + 20);
+        if (a.indexOf(t) == -1);
+        a[i] = t;
+        i++;
+    } while (i < 10);
+    document.write('Các phần tử của mảng là ' + a + "<br>")
+
+    let max = a[0];
+    let index;
+    for (i = 0; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i];
+            index = i;
+        }
+    }
+    document.write("Giá trị lớn nhất của mảng tại vị trí: " + index + " và có giá trị là: " + max);
+</script>
+
+<body>
+
+</body>
+
+</html>

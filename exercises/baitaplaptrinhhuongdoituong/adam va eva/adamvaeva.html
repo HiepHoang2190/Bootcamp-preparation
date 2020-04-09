@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td><input type="image" src="../adam va eva/images/Adam.png" onclick="adam()"></td>
+                <td><input type="image" src="../adam va eva/images/Eva.png" onclick="eva()"></td>
+                <td><input type="image" src="../adam va eva/images/Apple.jpg" onclick="applee()"> Scroll Down</td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="Check" onclick="check()"> <input type="button" value="Eat" onclick="Eat()"><input type="button" value="Talk" onclick="talk()"></td>
+                <td> <input type="button" value="Check" onclick="check1()"><input type="button" value="Eat" onclick="Eat1()"><input type="button" value="Talk" onclick="talk1()"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let Apple = function (){
+            this.weightApple=0;
+            this.getWeight = function (){
+                return this.weightApple;
+            }
+            this.decreaseWeight = function (){
+                if(this.weightApple>0){
+                    this.weightApple--;
+                }
+            }
+        }
+        let Human = function (name,gender,weight){
+            this.name=name;
+            this.gender=gender;
+            this.weight=weight;
+            this.talk=function(something){
+                 console.log(this.name+' said: '+something)
+            }
+            this.eatApple = function (apple){
+                return apple.decreaseWeight()
+            }
+            this.check= function (apple){
+                return apple.getWeight();
+            }
+        }
+        let Adam = new Human ('Adam','Male','60kg');
+        let Eva  = new Human ('Eva','FeMale','45kg');
+        let app = new Apple();
+        let haveApple = false;
+        alert('Click the pictrue')
+        function adam(){
+            alert('Name: '+Adam.name + ' Gender: '+Adam.gender + ' Weight: ' +Adam.weight)
+        }
+        function eva(){
+            alert('Name: '+Eva.name + ' Gender: '+Eva.gender + ' Weight: ' +Eva.weight)
+        }  
+        function applee(){
+            alert('You have an apple')
+            haveApple= true;
+            app.weightApple+=10;
+        }
+        function check(){
+          if(haveApple==true){
+            let weightLeft = Adam.check(app);
+           alert('Apple left '+app.weightApple )
+          } else {
+              alert('You dont have an apple! Click the apple tree')
+          }
+        }
+        function Eat(){
+            if(haveApple==false){
+                alert('You dont have an apple! Click the apple tree');
+                
+            }else if(app.weightApple==0){
+                alert('Out of apple');
+                
+            } else {
+                app.decreaseWeight();
+                alert( Adam.name+' is eatting the apple');
+            }
+        }
+        function check1(){
+          if(haveApple==true){
+            let weightLeft = Eva.check(app);
+           alert('Apple left '+app.weightApple );
+          } else {
+              alert('You dont have an apple! Click the apple tree');
+          }
+        }
+        function Eat1(){
+            if(haveApple==false){
+                alert('You dont have an apple! Click the apple tree');
+                
+            }else if(app.weightApple==0){
+                alert('Out of apple');
+                
+            } else {
+                app.decreaseWeight()
+                alert( Eva.name+' is eatting the apple');
+            }
+        }
+        function talk(){
+            let msg = prompt(Adam.name+ " want to say");
+            if(msg!=null){
+            Adam.talk(msg)
+            alert('Open console to see conversation :3')
+        }
+        }
+        function talk1(){
+            let msg = prompt(Eva.name+ " want to say");
+            if(msg!=null){
+            Eva.talk(msg)
+            alert('Open console to see conversation :3')
+        }
+        }
+    </script>
+</body>
+</html>

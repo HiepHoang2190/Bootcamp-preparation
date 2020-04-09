@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <!-- Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. Gọi hàm
+    từ trong phần body của trang web và hiển thị kết quả lên màn hình. -->
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+                <th>Enter a value</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="input1" placeholder="number"></td>
+                       <td><input type="button"  onclick="Add()" value="add"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <div id="ketqua"></div>
+        <script>
+            function Add() {
+                let a=+document.getElementById("input1").value;
+                let s;
+                 document.getElementById("ketqua").innerHTML= "Cộng 1 vào giá trị mà bạn thêm vào" + (s=(a+1));
+            }
+        </script>
+    </body>
+
+</html>
